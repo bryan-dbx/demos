@@ -19,9 +19,9 @@ echo "##########################################################################
 echo "#  STILL HERE?  OKAY, YOU NEED TO KNOW THIS SCRIPT MAY RESTART YOUR       #"
 echo "#  CLUSTER. IF ANYONE ELSE IS WORKING ON IT ... WELL, WHO THE HELL KNOWS  #"
 echo "#  WHAT MIGHT HAPPEN TO THEIR WORK.  DID I MENTION THIS SCRIPT HASN'T     #"
-echo "#  FULLY TESTED?                                                          #"
+echo "#  BEEN FULLY TESTED?                                                          #"
 echo "#                                                                         #"
-echo "#  IF YOUR STILL WANT TO PROCEED, ENTER THE Y KEY.                        #"
+echo "#  IF YOU STILL WANT TO PROCEED, ENTER THE Y KEY.                        #"
 echo "###########################################################################"
 echo
 
