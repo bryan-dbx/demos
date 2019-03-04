@@ -3,7 +3,7 @@
 # MAGIC 
 # MAGIC Before running this demonstration, you need to deploy the following to the region within which you run Azure Databricks:
 # MAGIC </p>
-# MAGIC * HDInsight Hive/LLAP Cluster, *e.g.* brysmihdi, configured with external metastore, *e.g.* brysmi-default/metastore
+# MAGIC * HDInsight Hive/LLAP Cluster, *e.g.* brysmihdi, configured with external metastore, *e.g.* brysmimeta/metastore
 # MAGIC * Azure Storage Account, *e.g.* brysmiwasb
 # MAGIC </p>
 # MAGIC NOTE The official documentation for this scenario is found here: https://docs.azuredatabricks.net/user-guide/advanced/external-hive-metastore.html
