@@ -68,3 +68,36 @@ spark.conf.set(
 
 # COMMAND ----------
 
+# MAGIC %md So, what do we do when there is a version compatibility issue that doesn't allow a shared metastore?  Our best bet is to then script our tables using SHOW CREATE TABLE and then run this on our Spark cluster:
+# MAGIC 
+# MAGIC NOTICE that this method has no dependency on the cluster configs addressed at the top of this notebook.
+
+# COMMAND ----------
+
+import jaydebeapi as jdbc
+
+jdbc_conn_string = 'jdbc:hive2://brysmihdi.azurehdinsight.net:443/default;transportMode=http;ssl=true;httpPath=/hive2;user=admin;password=Aug082006!!!;'
+
+conn = jdbc.connect( 
+    'org.apache.hive.jdbc.HiveDriver', 
+    jdbc_conn_string 
+  )
+curs = conn.cursor()
+curs.execute('show create table default.hivesampletable')
+
+meta = curs.fetchall()  #(' '.join(w) for w in sixgrams)
+conn.close()
+
+
+
+# COMMAND ----------
+
+sql = ''
+for m in meta:
+  sql += m[0]+'\n'
+  
+sql = sql[:-1]
+print(sql)
+
+# COMMAND ----------
+
